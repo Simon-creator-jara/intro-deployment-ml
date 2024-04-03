@@ -1,11 +1,12 @@
 from sklearn.pipeline import Pipeline
 from joblib import dump
+import pickle
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
 def update_model(model: Pipeline)-> None:
-    dump(model, 'model/model.pkl')
+    pickle.dump(model, open('model/model.pkl', "wb"))
 
 def save_simple_metrics_report(train_score: float, test_score: float, validation_score:float, model: Pipeline) -> None:
     with open('report.txt','w') as report_file:

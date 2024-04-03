@@ -57,6 +57,7 @@ logger.info(f'Test Score: {test_score}')
 
 logger.info('Updating model ...')
 
+logger.info(grid_search.best_estimator_)
 update_model(grid_search.best_estimator_)
 
 logger.info('Generating model report ...')
