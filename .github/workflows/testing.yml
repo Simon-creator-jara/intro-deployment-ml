@@ -4,7 +4,7 @@ jobs:
   testing_api:
     runs-on: ubuntu-latest
     env:
-      SERVICE-ACCOUNT_KEY: ${{secrets.SERVICE-ACCOUNT_KEY}}
+      SERVICE_ACCOUNT_KEY: ${{secrets.SERVICE_ACCOUNT_KEY}}
     steps:
       - name: Checkout the repo 
         uses : actions/checkout@v2
