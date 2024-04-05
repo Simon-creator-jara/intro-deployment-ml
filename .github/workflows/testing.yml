@@ -13,7 +13,6 @@ jobs:
           pip3 install virtualenv
           virtualenv venv
           source venv/bin/activate
-          pip3 install Cython == 3.0.8
       - name: Installing dependencies
         run: |
           pip install dvc[gs]
