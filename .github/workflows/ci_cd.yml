@@ -18,7 +18,7 @@ jobs:
           virtualenv venv
           source venv/bin/activate
           pip install dvc[gs]
-          export GOOGLE_APPLICATION_CREDENTIALS= ${python utilities/setter.py}
+          export GOOGLE_APPLICATION_CREDENTIALS=$(python utilities/setter.py)
           dvc pull model/model.pkl.dvc -f -r model-tracker
       - name: Set up GCLOUD SDK
         uses: google-github-actions/setup-gcloud@v0
