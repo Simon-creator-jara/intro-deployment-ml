@@ -2,7 +2,7 @@ name: Testing API
 on : [push,pull_request]
 jobs: 
   testing_api:
-    runs-on: ubuntu-lates
+    runs-on: ubuntu-latest
     env:
       SERVICE_ACCOUNT_KEY: ${{secrets.SERVICE_ACCOUNT_KEY}}
     steps:
@@ -21,5 +21,5 @@ jobs:
         run: |
           export GOOGLE_APPLICATION_CREDENTIALS=$(python utilities/setter.py)
           dvc pull model/model.pkl -r model-tracker
-          pytest tests.py
+          pytest test.py
 

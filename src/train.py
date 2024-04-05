@@ -42,6 +42,8 @@ grid_search = GridSearchCV(model, param_grid=param_tuning, scoring='r2', cv=5)
 
 logger.info("Starting grid search...")
 
+print(X_train)
+print(y_train)
 grid_search.fit(X_train,y_train)
 
 logger.info('Cross validating with best model')

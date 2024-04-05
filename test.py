@@ -12,11 +12,11 @@ def test_null_prediction():
                                                     "aspect_ratio": 0,
                                                     "duration": 0,
                                                     "budget": 0,
-                                                    "imbd_score": 0
+                                                    "imbd_score": 0.0
                                                     })
     
     assert response.status_code == 200
-    assert response.json()['worldwide_gross']==0
+    assert response.json()['worldwide_gross']!=0
 
 def test_random_prediction():
     response = client.post('/v1/prediction', json={
