@@ -11,12 +11,18 @@ on:
         description: Why to run this
         required: false
         default: running CT
+permissions:                    # Global permissions configuration starts here
+  contents: write               # 'read' access to repository contents
+  pull-requests: write 
+  deployments: write
+  actions: write
 jobs:
   continous-trainig:
     runs-on: ubuntu-latest
     permissions:
       issues: write
       pull-requests: write
+      contents: write  
     steps:
       - name: Checkout repo
         uses: actions/checkout@v2
