@@ -12,7 +12,7 @@ def test_null_prediction():
                                                     "aspect_ratio": 0,
                                                     "duration": 0,
                                                     "budget": 0,
-                                                    "imbd_score": 0
+                                                    "imbd_score": 0.0
                                                     })
     
     assert response.status_code == 200
