@@ -29,7 +29,7 @@ jobs:
         run: |
           docker build . -t $REGISTRY_NAME:$GITHUB_SHA
           gcloud auth configure-docker us-central1-docker.pkg.dev -q
-          docker tag $REGION-docker.pkg.dev/$PROJECT_ID/prueba/$REGISTRY_NAME:$GITHUB_SHA
+          docker tag $REGISTRY_NAME:$GITHUB_SHA $REGION-docker.pkg.dev/$PROJECT_ID/prueba/$REGISTRY_NAME:$GITHUB_SHA
           sudo -u $USER docker push $REGION-docker.pkg.dev/$PROJECT_ID/prueba/$REGISTRY_NAME:$GITHUB_SHA
       - name: Deploy to Cloud run
         run: |
