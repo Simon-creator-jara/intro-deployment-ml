@@ -51,14 +51,6 @@ jobs:
         with:
             github_token: ${{secrets.GITHUB_TOKEN}}
             branch: ${{github.ref}}
-      - uses: iterative/setup-cml@v1
-      - name: Push metrics 
-        env: 
-          REPO_TOKEN: ${{secrets.GITHUB_TOKEN}}
-        run: |
-          cat report.txt >> report.md
-          cml publish prediction-behavior.png --md >> report.md
-          cml-send-comment report.md
 
 
 
