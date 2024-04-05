@@ -28,7 +28,7 @@ jobs:
       - name: Build and push
         run: |
           docker build . -t $REGISTRY_NAME:$GITHUB_SHA
-          gcloud auth configure-docker us-central1-docker.pkg.dev
+          gcloud auth configure-docker us-central1-docker.pkg.dev -q
           sudo -u $USER docker push $REGISTRY_NAME:$GITHUB_SHA
       - name: Deploy to Cloud run
         run: |
