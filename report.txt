@@ -1,5 +1,5 @@
 # Model Pipeline Description### imputer:<bound method BaseEstimator.__repr__ of SimpleImputer()>
-### core_model:<bound method BaseEstimator.__repr__ of GradientBoostingRegressor(n_estimators=180)>
-## Train Score:0.9615194435520402
-## Test Score:0.751338123398595
-## Validation Score:0.7459416592920644
+### core_model:<bound method BaseEstimator.__repr__ of GradientBoostingRegressor(n_estimators=200)>
+## Train Score:0.96483380904929
+## Test Score:0.7530706183746683
+## Validation Score:0.7395168592135043
