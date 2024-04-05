@@ -21,7 +21,7 @@ jobs:
           export GOOGLE_APPLICATION_CREDENTIALS= ${python utilities/setter.py}
           dvc pull model/model.pkl.dvc -f -r model-tracker
       - name: Set up GCLOUD SDK
-        uses: google-github-actions/setup-gcloud@master
+        uses: google-github-actions/setup-gcloud@v0
         with:
           service_account_key: ${{secrets.SERVICE_ACCOUNT_KEY}}
           project_id: ${{secrets.PROJECT_ID}}
@@ -33,4 +33,4 @@ jobs:
       - name: Deploy to Cloud run
         run: |
           gcloud run services update $SERVICE_NAME --region=$REGION --image=$REGISTRY_NAME:$GITHUB_SHA
-          
+
