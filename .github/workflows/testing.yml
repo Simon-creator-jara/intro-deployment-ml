@@ -10,10 +10,10 @@ jobs:
         uses : actions/checkout@v2
       - name: Creating and activating virtualenv
         run: |
-          pip3 install Cython == 3.0.8
           pip3 install virtualenv
           virtualenv venv
           source venv/bin/activate
+          pip3 install Cython == 3.0.8
       - name: Installing dependencies
         run: |
           pip install dvc[gs]
