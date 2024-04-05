@@ -15,5 +15,6 @@ def get_model() -> Pipeline:
 
 def transform_to_dataframe(class_model: BaseModel) -> DataFrame:
     transition_dictionary = {key:[value] for key, value in class_model.dict().items()}
-    data_frame = DataFrame(transition_dictionary,index=False)
+    data_frame = DataFrame(transition_dictionary,columns=['opening_gross', 'screens', 'production_budget', 'title_year', 'aspect_ratio','duration', 'budget', 'imdb_score'])
+    print(data_frame)
     return data_frame 
